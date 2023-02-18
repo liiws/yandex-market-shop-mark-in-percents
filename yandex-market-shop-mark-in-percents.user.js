@@ -3,9 +3,10 @@
 // @namespace   https://market.yandex.ru/
 // @include     https://market.yandex.ru/shop--*/reviews*
 // @include     https://market.yandex.ru/product--*/reviews*
+// @include     https://market.yandex.ru/business--*/*/reviews*
 // @grant       none
 // @run-at      document-start
-// @version     1.1.2
+// @version     1.1.3
 // @downloadURL https://bitbucket.org/liiws/yandex-market-shop-mark-in-percents/downloads/yandex-market-shop-mark-in-percents.user.js
 // @updateURL   https://bitbucket.org/liiws/yandex-market-shop-mark-in-percents/downloads/yandex-market-shop-mark-in-percents.meta.js
 // ==/UserScript==
@@ -14,7 +15,7 @@
 window.addEventListener('DOMContentLoaded', Run);
 window.addEventListener('load', Run);
 
-function Run() {
+function Run(isRepeating) {
 	// if we called from 'DOMContentLoaded' then we don't need be called from 'onload'
 	 window.removeEventListener('load', Run);
 
@@ -35,9 +36,15 @@ function Run() {
 
     var total = mark5val + mark4val + mark3val + mark2val + mark1val;
 
-    mark5elem.innerHTML += '<span style="color:red"> &nbsp; ' + (Math.round(mark5val/total*1000)/10) + '%</span>';
-    mark4elem.innerHTML += '<span style="color:red"> &nbsp; ' + (Math.round(mark4val/total*1000)/10) + '%</span>';
-    mark3elem.innerHTML += '<span style="color:red"> &nbsp; ' + (Math.round(mark3val/total*1000)/10) + '%</span>';
-    mark2elem.innerHTML += '<span style="color:red"> &nbsp; ' + (Math.round(mark2val/total*1000)/10) + '%</span>';
-    mark1elem.innerHTML += '<span style="color:red"> &nbsp; ' + (Math.round(mark1val/total*1000)/10) + '%</span>';
+    document.querySelectorAll(".yms-mip").forEach(elem => elem.remove());
+
+    mark5elem.innerHTML += '<span class="yms-mip" style="color:red"> &nbsp; ' + (Math.round(mark5val/total*1000)/10) + '%</span>';
+    mark4elem.innerHTML += '<span class="yms-mip" style="color:red"> &nbsp; ' + (Math.round(mark4val/total*1000)/10) + '%</span>';
+    mark3elem.innerHTML += '<span class="yms-mip" style="color:red"> &nbsp; ' + (Math.round(mark3val/total*1000)/10) + '%</span>';
+    mark2elem.innerHTML += '<span class="yms-mip" style="color:red"> &nbsp; ' + (Math.round(mark2val/total*1000)/10) + '%</span>';
+    mark1elem.innerHTML += '<span class="yms-mip" style="color:red"> &nbsp; ' + (Math.round(mark1val/total*1000)/10) + '%</span>';
+
+    if (isRepeating !== true) {
+        setTimeout(Run, 2000, true);
+    }
 }

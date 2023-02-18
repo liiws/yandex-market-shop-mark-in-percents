@@ -5,7 +5,7 @@
 // @include     https://market.yandex.ru/product--*/reviews*
 // @grant       none
 // @run-at      document-start
-// @version     1.1.2
+// @version     1.1.3
 // @downloadURL https://bitbucket.org/liiws/yandex-market-shop-mark-in-percents/downloads/yandex-market-shop-mark-in-percents.user.js
 // @updateURL   https://bitbucket.org/liiws/yandex-market-shop-mark-in-percents/downloads/yandex-market-shop-mark-in-percents.meta.js
 // ==/UserScript==
