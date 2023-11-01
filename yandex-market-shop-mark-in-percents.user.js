@@ -6,9 +6,9 @@
 // @include     https://market.yandex.ru/business--*/*/reviews*
 // @grant       none
 // @run-at      document-start
-// @version     1.1.3
-// @downloadURL https://bitbucket.org/liiws/yandex-market-shop-mark-in-percents/downloads/yandex-market-shop-mark-in-percents.user.js
-// @updateURL   https://bitbucket.org/liiws/yandex-market-shop-mark-in-percents/downloads/yandex-market-shop-mark-in-percents.meta.js
+// @version     1.1.4
+// @downloadURL https://github.com/liiws/yandex-market-shop-mark-in-percents/releases/download/release/yandex-market-shop-mark-in-percents.user.js
+// @updateURL   https://github.com/liiws/yandex-market-shop-mark-in-percents/releases/download/release/yandex-market-shop-mark-in-percents.meta.js
 // ==/UserScript==
 
 

@@ -12,4 +12,4 @@
 
 # Скачать
 
-[yandex-market-shop-mark-in-percents.user.js](https://bitbucket.org/liiws/yandex-market-shop-mark-in-percents/downloads/yandex-market-shop-mark-in-percents.user.js).
+[yandex-market-shop-mark-in-percents.user.js](https://github.com/liiws/yandex-market-shop-mark-in-percents/releases/download/release/yandex-market-shop-mark-in-percents.user.js).
